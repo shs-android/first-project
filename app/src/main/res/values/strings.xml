@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">first-project</string>
+
+    <string name="korean">한식</string>
 </resources>
