@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">first-project</string>
 
-    <string name="korean">한식</string>
+    <string name="korean_food">한식</string>
+    <string name="western_food">양식</string>
+    <string name="chinese_food">중식</string>
+    <string name="japanese_food">일식</string>
+    <string name="dessert">디저트</string>
+    <string name="school_food">분식</string>
 </resources>
