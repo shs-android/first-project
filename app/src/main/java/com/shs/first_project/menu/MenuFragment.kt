@@ -25,6 +25,7 @@ class MenuFragment() : Fragment() {
                     Food(
                         "김치찌개",
                         R.drawable.abc_list_selector_disabled_holo_dark,
+                        "",
                         listOf(
                             Recipe(
                                 "김치찌개 만들기",
@@ -40,6 +41,7 @@ class MenuFragment() : Fragment() {
                     Food(
                         "짜장면",
                         R.drawable.abc_action_bar_item_background_material,
+                        "",
                         listOf(
                             Recipe(
                                 "짜장면 만들기",
