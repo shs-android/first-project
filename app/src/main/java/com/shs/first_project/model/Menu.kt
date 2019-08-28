@@ -12,6 +12,7 @@ data class Menu(
 data class Food(
     val name: String,
     val image: Int,
+    val content: String,
     val recipes: List<Recipe>
 ): Parcelable
 

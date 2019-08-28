@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.shs.first_project.MainFragment"
+        android:name="com.shs.first_project.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main"
         >
