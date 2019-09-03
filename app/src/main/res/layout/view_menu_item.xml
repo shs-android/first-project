@@ -6,22 +6,32 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            back
+            android:layout_height="200dp"
             tools:context=".MainActivity">
 
-        <Button
+        <TextView
                 android:id="@+id/titleView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:text="@string/korean_food"
                 android:backgroundTint="@color/colorRoseGold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-        />
+                android:textSize="24sp" android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="@+id/view" app:layout_constraintTop_toTopOf="@+id/view"/>
 
+        <View android:layout_width="0dp" android:layout_height="50dp"
+              android:background="@color/color10Black"
+              app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
+              android:id="@+id/view"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                android:id="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.6"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

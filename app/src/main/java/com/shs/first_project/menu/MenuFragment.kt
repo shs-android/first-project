@@ -66,7 +66,7 @@ class MenuFragment() : Fragment() {
     }
 
     private fun setRecyclerView(binding: FragmentMenuBinding) {
-        binding.recyclerView.layoutManager = GridLayoutManager(context, 3)
+        binding.recyclerView.layoutManager = GridLayoutManager(context, 2)
         val menuAdapter = MenuAdapter()
         binding.recyclerView.adapter = menuAdapter
         menuAdapter.addAll(menuList)
