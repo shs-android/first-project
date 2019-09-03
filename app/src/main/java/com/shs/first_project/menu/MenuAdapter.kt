@@ -10,7 +10,7 @@ import com.shs.first_project.R
 import com.shs.first_project.model.Menu
 
 class MenuAdapter() : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
-    private val items = arrayListOf<Menu>()
+    private var items = arrayListOf<Menu>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         return MenuViewHolder(
@@ -26,12 +26,16 @@ class MenuAdapter() : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
         return items.size
     }
 
+    fun addAll(itemList: ArrayList<Menu>) {
+        items = itemList
+        notifyDataSetChanged()
+    }
 
     class MenuViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val titleView: TextView
 
         init {
-            titleView = view.findViewById<TextView>(R.id.titleView)
+            titleView = view.findViewById(R.id.titleView)
         }
         fun bind(menu: Menu) {
             titleView.text = menu.name

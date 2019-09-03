@@ -14,11 +14,11 @@ import com.shs.first_project.model.Menu
 import com.shs.first_project.model.Recipe
 
 class MenuFragment() : Fragment() {
-    private lateinit var menuList: List<Menu>
+    private lateinit var menuList: ArrayList<Menu>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        menuList = listOf(
+        menuList = arrayListOf(
             Menu(
                 "한식",
                 listOf(
@@ -67,5 +67,8 @@ class MenuFragment() : Fragment() {
 
     private fun setRecyclerView(binding: FragmentMenuBinding) {
         binding.recyclerView.layoutManager = GridLayoutManager(context, 3)
+        val menuAdapter = MenuAdapter()
+        binding.recyclerView.adapter = menuAdapter
+        menuAdapter.addAll(menuList)
     }
 }
