@@ -21,8 +21,8 @@
                 tools:listitem="@layout/view_menu_item"
                 tools:itemCount="6" android:background="@color/colorSeashell"
                 android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintVertical_bias="0.0"/>
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="1.0"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
