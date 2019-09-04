@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="recipe_style">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:color">@color/colorBlack</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
 </resources>
