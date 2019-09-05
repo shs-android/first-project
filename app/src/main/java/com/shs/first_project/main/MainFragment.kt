@@ -6,20 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.shs.first_project.R
 import com.shs.first_project.databinding.FragmentMainBinding
 import com.shs.first_project.model.Food
+import com.shs.first_project.model.Menu
 
 class MainFragment: Fragment() {
-    private lateinit var foods: List<Food>
+    val args: MainFragmentArgs by navArgs()
 
+    private lateinit var menu: Menu
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        foods = listOf(
-            Food("김치찌개", R.drawable.abc_ic_clear_material, "김치찌개는 매콤한 음식입니다.", listOf())
-        )
+        menu = args.menu
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +33,6 @@ class MainFragment: Fragment() {
 
     private fun setRecyclerView(binding: FragmentMainBinding) {
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
-        binding.recyclerView.adapter = MainAdapter(foods)
+        binding.recyclerView.adapter = MainAdapter(menu.foods)
     }
 }

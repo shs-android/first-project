@@ -6,6 +6,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Menu(
     val name: String,
+    val image: Int,
     val foods: List<Food>
 ): Parcelable
 
@@ -20,5 +21,6 @@ data class Food(
 @Parcelize
 data class Recipe(
     val name: String,
-    val description: String // 설명
+    val description: String, // 설명
+    val image: Int
 ): Parcelable

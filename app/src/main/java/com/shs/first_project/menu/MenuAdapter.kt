@@ -3,6 +3,7 @@ package com.shs.first_project.menu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
@@ -32,15 +33,22 @@ class MenuAdapter() : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
         notifyDataSetChanged()
     }
 
-    class MenuViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class MenuViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val titleView: TextView
+        private val imageView: ImageView
 
         init {
             titleView = view.findViewById(R.id.titleView)
+            imageView = view.findViewById(R.id.imageView)
+
         }
 
         fun bind(menu: Menu) {
             titleView.text = menu.name
+            imageView.setImageResource(menu.image)
+            itemView.setOnClickListener{
+                itemClickListener?.invoke(menu)
+            }
         }
     }
 }

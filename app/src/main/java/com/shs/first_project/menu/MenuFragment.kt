@@ -22,15 +22,17 @@ class MenuFragment() : Fragment() {
         menuList = arrayListOf(
             Menu(
                 "한식",
+                R.drawable.doenjang_jjigae,
                 listOf(
                     Food(
-                        "김치찌개",
-                        R.drawable.abc_list_selector_disabled_holo_dark,
-                        "",
+                        "된장찌개",
+                        R.drawable.doenjang_jjigae,
+                        "된장을 푼 물에 갖은 재료를 넣어 끓인 찌개로 토장찌개라고도 불린다.",
                         listOf(
                             Recipe(
                                 "김치찌개 만들기",
-                                "첫번째 ..."
+                                "첫번째 ...",
+                                R.drawable.doenjang_jjigae
                             )
                         )
                     )
@@ -38,15 +40,17 @@ class MenuFragment() : Fragment() {
             ),
             Menu(
                 "중식",
+                R.drawable.noodles_with_black_bean_sauce,
                 listOf(
                     Food(
                         "짜장면",
-                        R.drawable.abc_action_bar_item_background_material,
+                        R.drawable.noodles_with_black_bean_sauce,
                         "",
                         listOf(
                             Recipe(
                                 "짜장면 만들기",
-                                "첫번째 ..."
+                                "첫번째 ...",
+                                R.drawable.noodles_with_black_bean_sauce
                             )
                         )
                     )
@@ -70,8 +74,8 @@ class MenuFragment() : Fragment() {
         binding.recyclerView.layoutManager = GridLayoutManager(context, 2)
         val menuAdapter = MenuAdapter().apply {
             itemClickListener = {
-
-                findNavController().navigate(R.id.action_menuFragment_to_mainFragment)
+                val action = MenuFragmentDirections.actionMenuFragmentToMainFragment(it)
+                findNavController().navigate(action)
             }
         }
         binding.recyclerView.adapter = menuAdapter
