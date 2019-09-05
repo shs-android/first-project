@@ -11,6 +11,7 @@ import com.shs.first_project.model.Menu
 
 class MenuAdapter() : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
     private var items = arrayListOf<Menu>()
+    var itemClickListener: ((Menu) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         return MenuViewHolder(
@@ -37,6 +38,7 @@ class MenuAdapter() : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
         init {
             titleView = view.findViewById(R.id.titleView)
         }
+
         fun bind(menu: Menu) {
             titleView.text = menu.name
         }

@@ -14,7 +14,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/korean_food"
-                android:backgroundTint="@color/colorRoseGold"
                 android:textSize="24sp" android:layout_margin="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/view" android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="@+id/view" app:layout_constraintTop_toTopOf="@+id/view"/>

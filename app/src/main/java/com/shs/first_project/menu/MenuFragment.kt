@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.shs.first_project.R
 import com.shs.first_project.databinding.FragmentMenuBinding
@@ -67,7 +68,12 @@ class MenuFragment() : Fragment() {
 
     private fun setRecyclerView(binding: FragmentMenuBinding) {
         binding.recyclerView.layoutManager = GridLayoutManager(context, 2)
-        val menuAdapter = MenuAdapter()
+        val menuAdapter = MenuAdapter().apply {
+            itemClickListener = {
+
+                findNavController().navigate(R.id.action_menuFragment_to_mainFragment)
+            }
+        }
         binding.recyclerView.adapter = menuAdapter
         menuAdapter.addAll(menuList)
     }

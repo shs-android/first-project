@@ -3,10 +3,11 @@ package com.shs.first_project.model
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Menu(
     val name: String,
     val foods: List<Food>
-)
+): Parcelable
 
 @Parcelize
 data class Food(
